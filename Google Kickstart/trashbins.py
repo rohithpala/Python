@@ -7,13 +7,15 @@ for T in range(t):
     if(all(trash)):
         print("Case #" + str(T+1) + ": 0")
     else:
-        enum = enumerate(trash)
-        zeros_list = [i for i, n in enum if n == 0]
-        enum = enumerate(trash)
-        ones_list = [i for i, n in enum if n == 1]
+        zeros_list, ones_list = [], []
+        for i in range(n):
+            if trash[i] == 0:
+                zeros_list.append(i)
+            else:
+                ones_list.append(i)
         total_distance = 0
         for zero in zeros_list:
-            minimum = 500000
+            minimum = 125000250000
             for one in ones_list:
                 calc = abs(zero - one)
                 if(minimum > calc):
