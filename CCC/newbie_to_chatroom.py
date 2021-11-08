@@ -19,14 +19,13 @@ NO
 """
 
 s = input()
-try:
-     if 0 <= s.index("hello") <= 100:
+hello = "hello"
+i = 0
+for ch in s:
+     if ch == hello[i]:
+          i += 1
+     if i == 5:
           print("YES")
-except:
-     e = s.index("e")
-     l = s.index("l")
-     o = s.index("o")
-     if s.index("h") < e < l < o and o - l >= 2 and s.count("l") >= 2:
-          print("YES")
-     else:
-          print("NO")
+          break
+if i != 5:
+     print("NO")
