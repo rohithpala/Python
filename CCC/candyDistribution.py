@@ -31,3 +31,10 @@ So rating 2 candidate gets 2 candies. In total, 2+1 = 3 candies need to be given
 n = int(input())
 ratings = list(map(int, input().split()))
 candies = [1]*n
+for i in range(0, n-1):
+    if ratings[i] < ratings[i+1]:
+        candies[i+1] = candies[i] + 1
+for i in range(n-1, 0, -1):
+    if ratings[i] < ratings[i-1] and candies[i-1] < candies[i]+1:
+        candies[i-1] = candies[i] + 1
+print(sum(candies))
