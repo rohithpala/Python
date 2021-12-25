@@ -6,8 +6,9 @@ def isPrime(n):
             return False
     return True
 
-num = int(input("Enter the Number to be Checked: "))
-if isPrime(num):
-    print(str(num) + " is a prime number")
-else:
-    print(str(num) + " is not a prime number")
+if __name__ == "__main__":
+    num = int(input("Enter the Number to be Checked: "))
+    if isPrime(num):
+        print(str(num) + " is a prime number")
+    else:
+        print(str(num) + " is not a prime number")

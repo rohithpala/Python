@@ -1,10 +1,10 @@
 import random
 import string
 
-def passwordGenerator(passwordLength = 8):
+def passwordGenerator(passwordLength=8):
     allChars = string.ascii_letters + string.digits + string.punctuation
-    temp = random.sample(allChars, passwordLength)
-    return ''.join(temp)
+    return "".join(random.sample(allChars, passwordLength))
 
-passwordLength_ = int(input("What is the Password Length: "))
-print("Your Password is", passwordGenerator(passwordLength_))
+if __name__ == "__main__":
+    passwordLength_ = int(input("What is the Password Length: "))
+    print("Your Password is", passwordGenerator(passwordLength_))
