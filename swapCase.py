@@ -1,4 +1,4 @@
-def swap_case(s):
+def swapCase(s):
     result = ""
     for ch in s:
         if ch.isalpha():
@@ -9,6 +9,6 @@ def swap_case(s):
 
 
 if __name__ == "__main__":
-    s = input()
-    result = swap_case(s)
+    s = input("Enter a Word/Sentene")
+    result = swapCase(s)
     print(result)
