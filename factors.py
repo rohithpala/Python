@@ -20,5 +20,4 @@ def factors(n):
 
 
 num = int(input("Enter Number: "))
-print("Factors of " + str(num) + ": ", end="")
-print(factors(num))
+print("Factors of", num, ":", factors(num))
